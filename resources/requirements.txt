@@ -1,9 +1,9 @@
-# Upgrade SQLite manually
-pysqlite3-binary>=0.5.2.post3
-pysqlite3==0.5.2
+# Updated dependencies without pysqlite3
 pip==24.0
 setuptools==68.2.2
 wheel==0.42.0
+aiosqlite==0.19.0  # Alternative to pysqlite3 for async support
+
 
 # Essential Libraries
 streamlit==1.35.0
