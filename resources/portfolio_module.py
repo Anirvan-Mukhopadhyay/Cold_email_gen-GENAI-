@@ -1,7 +1,3 @@
-
-import sys
-sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
-
 import pandas as pd
 import chromadb
 import uuid
