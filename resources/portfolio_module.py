@@ -6,11 +6,7 @@ import os
 
 
 class Portfolio:
-    def __init__(self, file_path=None):
-        # Set default file path for both Windows and Linux environments
-        if file_path is None:
-            file_path = os.path.join(os.getcwd(), "resources", "my_portfolio.csv")
-
+    def __init__(self, file_path="resources/my_portfolio.csv"):
         self.file_path = file_path
 
         # Check if file exists
