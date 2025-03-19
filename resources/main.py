@@ -2,7 +2,7 @@ import streamlit as st
 import os
 from langchain_community.document_loaders import WebBaseLoader
 from chains import Chain
-from resources.portfolio_module import Portfolio
+from portfolio_module import Portfolio
 from utils import clean_text
 import subprocess
 
