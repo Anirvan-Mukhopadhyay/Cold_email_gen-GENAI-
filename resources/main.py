@@ -2,8 +2,14 @@ import streamlit as st
 import os
 from langchain_community.document_loaders import WebBaseLoader
 from chains import Chain
-from portfolio_nodule import Portfolio
+from resources.portfolio_module import Portfolio
 from utils import clean_text
+import subprocess
+
+# Force upgrade SQLite for ChromaDB
+os.environ["LD_LIBRARY_PATH"] = "/home/adminuser/.local/lib"
+subprocess.run(["pip", "install", "--upgrade", "--force-reinstall", "pysqlite3-binary"], check=True)
+subprocess.run(["pip", "install", "--upgrade", "--force-reinstall", "pysqlite3"], check=True)
 
 # Set environment variables
 os.environ["USER_AGENT"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
@@ -21,7 +27,7 @@ st.markdown(
                 .stTextInput > div { width: 100% !important; }
                 .stButton > button { width: 100%; }
             }
-            
+
             /* Page Background and Thick Border */
             /* Full Page Background and Thick Border */
             html, body, .stApp {
