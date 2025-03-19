@@ -1,6 +1,4 @@
 import os
-os.environ["PYTHONUTF8"] = "1"  # Ensures UTF-8 compatibility
-os.environ["LD_LIBRARY_PATH"] = "/usr/local/lib"  # Helps with SQLite compatibility
 import pandas as pd
 import chromadb
 import uuid
