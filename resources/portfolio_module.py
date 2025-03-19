@@ -3,18 +3,21 @@ import pandas as pd
 import chromadb
 import uuid
 import os
-
+import aiosqlite  # Async SQLite alternative
 
 class Portfolio:
-    def __init__(self, file_path="resources/my_portfolio.csv"):
-        self.file_path = file_path
+    def __init__(self, file_path=None):
+        if file_path is None:
+            file_path = os.path.join(os.getcwd(), "resources", "my_portfolio.csv")
 
-        # Check if file exists
+        self.file_path = file_path
         if not os.path.exists(file_path):
             raise FileNotFoundError(f"Portfolio CSV not found at {file_path}")
 
         self.data = pd.read_csv(file_path)
-        self.chroma_client = chromadb.PersistentClient("./vectorstore")  # Ensure this is a valid path
+        
+        # Ensure ChromaDB works with aiosqlite (if required)
+        self.chroma_client = chromadb.PersistentClient("./vectorstore")
         self.collection = self.chroma_client.get_or_create_collection(name="portfolio")
 
     def load_portfolio(self):
