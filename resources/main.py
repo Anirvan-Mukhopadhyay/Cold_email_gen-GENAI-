@@ -14,6 +14,14 @@ st.set_page_config(layout='wide', page_title="Cold Email Generator")
 st.markdown(
     """
         <style>
+
+          /* Responsive Design */
+            @media (max-width: 768px) {
+                .stApp { padding: 10px; }
+                .stTextInput > div { width: 100% !important; }
+                .stButton > button { width: 100%; }
+            }
+            
             /* Page Background and Thick Border */
             /* Full Page Background and Thick Border */
             html, body, .stApp {
