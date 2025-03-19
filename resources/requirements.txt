@@ -1,5 +1,5 @@
 # Upgrade SQLite manually
-pysqlite3-binary==0.5.2
+pysqlite3-binary>=0.5.2.post3
 pysqlite3==0.5.2
 pip==24.0
 setuptools==68.2.2
