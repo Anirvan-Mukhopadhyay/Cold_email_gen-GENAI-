@@ -1,6 +1,9 @@
-pip>=25.0.1
-setuptools>=68.0.0
-wheel
+# Upgrade SQLite manually
+pysqlite3-binary==0.5.2
+pysqlite3==0.5.2
+pip==24.0
+setuptools==68.2.2
+wheel==0.42.0
 
 # Essential Libraries
 streamlit==1.35.0
@@ -22,6 +25,8 @@ rich==13.9.4
 chromadb==0.5.0
 selenium==4.21.0
 unstructured==0.14.6
+
+# LangChain
 langchain==0.2.14
-langchain-community==0.2.12
+langchain-community==0.2.14
 langchain-groq==0.1.9
