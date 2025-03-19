@@ -1,6 +1,3 @@
-pip==25.0.1
-setuptools>=65.0.0
-wheel
 langchain==0.2.14
 langchain-community==0.2.12
 langchain-groq==0.1.9
@@ -11,4 +8,9 @@ streamlit==1.35.0
 pandas==2.0.2
 python-dotenv==1.0.0
 pysqlite3-binary>=0.5.2
-webbaseloader
+
+# Force reinstall to avoid conflicts
+--upgrade --force-reinstall pygments
+--upgrade --force-reinstall mdurl
+--upgrade --force-reinstall markdown-it-py
+--upgrade --force-reinstall rich
