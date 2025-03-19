@@ -1,20 +1,27 @@
 pip>=25.0.1
-setuptools>=65.0.0
+setuptools>=68.0.0
 wheel
 
-langchain==0.2.14
-langchain-community==0.2.12
-langchain-groq==0.1.9
-unstructured==0.14.6
-selenium==4.21.0
-chromadb==0.5.0
+# Essential Libraries
 streamlit==1.35.0
-pandas==2.0.2
+pandas==2.1.4
+numpy==1.26.4
+requests>=2.31.0
 python-dotenv==1.0.0
-pysqlite3-binary>=0.5.2
 
-# Force reinstall to avoid conflicts
+# Machine Learning & Data
+scikit-learn>=1.4.1
+xgboost==2.0.3
+matplotlib>=3.8.2
+
+# Additional Libraries
 pygments==2.19.1
 mdurl==0.1.2
 markdown-it-py==3.0.0
 rich==13.9.4
+chromadb==0.5.0
+selenium==4.21.0
+unstructured==0.14.6
+langchain==0.2.14
+langchain-community==0.2.12
+langchain-groq==0.1.9
